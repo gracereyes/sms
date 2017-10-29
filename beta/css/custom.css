@@ -1,0 +1,64 @@
+.sidebar, .container { top: 15px; }
+
+.draggable, .cloned {
+	width: 200px;
+	height: auto;
+	padding: 5px;
+	float: left;
+	margin: 0 10px 10px 0;
+	font-size: .9em;
+	border: 2px solid transparent;
+	background:transparent; 
+    z-index: 999;
+  }
+
+.cloned .controls { text-align: center; }
+
+  .ui-widget-header p, .ui-widget-content p { margin: 0; }
+
+    #snaptarget, .snaptarget {
+    height: 500px;
+    background: url('../resources/img/theatre.jpg') no-repeat !important;
+    background-position: bottom center !important;
+    background-size: 100% auto !important;
+  }
+
+/*  .allEquipments { margin:0; padding: 0; width: 100%; height: 540px; overflow-y: scroll; overflow-x: hidden; }*/
+  
+  .draggable img, .cloned img { width: 100%; } 
+
+  .draggable:hover {
+  	border: 2px solid red;
+  	background: transparent !important;
+  }
+
+  .flip {
+       -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+      }
+
+  
+
+  #containment-wrapper {
+  	width: 100%; 
+  	height: 600px;
+  	border:2px solid #ccc;
+  }
+
+  h3 { clear: left; }
+
+  .hidden {display: none; }
+
+  .sm { width: 100px; } 
+
+  .rotBtn { padding: 0 3px !important; }
+
+  .container-fluid { margin-top: 50px;  }
+
+
+  .list-group-item { padding: 2px 10px;   }
+  .list-group-item:hover { background: #EEE;  }
