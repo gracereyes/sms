@@ -25,12 +25,9 @@
     $(".loader").click(function(){
       var thisId = $(this).attr("value");
       var thisElem = $("#"+thisId).html();
+  
 
-    
-
-      // $("#"+thisObj).removeClass("hidden").appendTo("#containment-wrapper");
-
-      $("#containment-wrapper").append("<div class='cloned' style='position: absolute; top:2%; left: 2%;'>"+thisElem+"</div>");
+      $("#containment-wrapper").append("<div class='cloned' style='position: absolute; top:2%; left: 2%;' >"+thisElem+"</div>");
 
       $(".cloned").draggable({
 
@@ -48,17 +45,32 @@
       $(".rotRight").click(function(){
          $(this).closest('div.cloned').addClass('flip');
          $(this).closest('div.controls').addClass('flip');
-        // $(this).remove();
       });
 
       $(".rotLeft").click(function(){
         // alert("oy");
          $(this).closest('div.cloned').removeClass('flip');
          $(this).closest('div.controls').removeClass('flip');
-        // $(this).remove();
       });
 
+      $(".trash").click(function(){
+         $(this).closest('div.cloned').remove();
+      });
+
+
+
     }); // end of loader
+
+
+ 
+      $(".cloned").mouseover(function(){
+        $(this).closest("div.controls").toggle("slow");
+
+      });
+
+      $(".snaptarget").click(function(){
+        $('.controls').toggle("slow");
+      });
 
   });// main function
   </script>
@@ -83,11 +95,13 @@
           <div id="containment-wrapper" class="ui-widget-header drop snaptarget">
   
           <!-- ready equipments pictures  -->
+          
             <div id="eq1" class="draggable ui-widget-content hidden" >
               <img src="resources/img/opTable2.png" class="sm" />
                 <div class="controls">
                 <button class='rotLeft rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-left"></span></button>
                 <button class='rotRight rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-right"></span></button>
+                <button class='trash rotBtn btn btn-sm' ><span class="glyphicon glyphicon-trash"></span></button>
                 </div>
             </div>
 
@@ -96,6 +110,7 @@
               <div class="controls">
                 <button class='rotLeft rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-left"></span></button>
                 <button class='rotRight rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-right"></span></button>
+                <button class='trash rotBtn btn btn-sm' ><span class="glyphicon glyphicon-trash"></span></button>
                 </div>
             </div>
 
@@ -104,6 +119,7 @@
               <div class="controls">
                 <button class='rotLeft rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-left"></span></button>
                 <button class='rotRight rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-right"></span></button>
+                <button class='trash rotBtn btn btn-sm' ><span class="glyphicon glyphicon-trash"></span></button>
                 </div>
             </div>
 
@@ -112,6 +128,7 @@
               <div class="controls">
                 <button class='rotLeft rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-left"></span></button>
                 <button class='rotRight rotBtn btn btn-sm' ><span class="glyphicon glyphicon-arrow-right"></span></button>
+                <button class='trash rotBtn btn btn-sm' ><span class="glyphicon glyphicon-trash"></span></button>
                 </div>
             </div>
 
