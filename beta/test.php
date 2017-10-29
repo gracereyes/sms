@@ -6,8 +6,6 @@
   <title>jQuery UI Draggable - Constrain movement</title>
 
 
-
-
 <?php include 'header.php'; ?>
 
 
@@ -78,7 +76,7 @@
 <body>
 <?php include 'navigation.php'; ?> 
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 50px">
       <div class="row">
         <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-light sidebar">
         <h5>Surgical Instruments:</h5>
